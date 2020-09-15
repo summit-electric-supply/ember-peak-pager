@@ -1,0 +1,6 @@
+{{#each @pages as |page|}}
+  {{yield page.page
+          (component "peak-pager-link" query=(hash page=page.page) route=@route)
+          page.isCurrentPage
+          page.isTruncated}}
+{{/each}}

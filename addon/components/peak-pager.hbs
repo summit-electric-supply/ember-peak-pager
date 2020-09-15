@@ -1,0 +1,5 @@
+{{yield (component "peak-pager-segments" pages=this.pages route=@route)
+        (component "peak-pager-link" query=(hash page=this.previousPage) route=@route)
+        (component "peak-pager-link" query=(hash page=this.nextPage) route=@route)
+        this.isBackEnabled
+        this.isForwardEnabled}}

@@ -1,13 +1,14 @@
 {
   "name": "@summit-electric-supply/ember-peak-pager",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A simple, flexible and customizable pagination UI component for paginated data.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "bugs": "https://github.com/summit-electric-supply/ember-peak-pager/issues",
+  "repository": "https://github.com/summit-electric-supply/ember-peak-pager",
   "license": "MIT",
-  "author": "",
+  "author": "Steve Jabour <steve@jabour.me> (https://github.com/atsjj)",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -63,5 +64,34 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "issueUrl": "https://github.com/summit-electric-supply/ember-peak-spinner/issues/{id}",
+    "package": "package.json",
+    "releaseSummary": true,
+    "template": "https://gist.githubusercontent.com/atsjj/de6998d6750a8b32778fa3380da24301/raw/66a23990c3324f03aa756e45fed70d46389c7eab/normal.hbs"
+  },
+  "release-it": {
+    "git": {
+      "changelog": "npx auto-changelog --stdout --template https://gist.githubusercontent.com/atsjj/de6998d6750a8b32778fa3380da24301/raw/66a23990c3324f03aa756e45fed70d46389c7eab/compact.hbs",
+      "requireCleanWorkingDir": true,
+      "requireUpstream": true,
+      "requireCommits": false,
+      "addUntrackedFiles": false,
+      "commit": true,
+      "commitMessage": "${version}",
+      "commitArgs": "--gpg-sign",
+      "tag": true,
+      "tagName": "${version}",
+      "tagAnnotation": "${version}",
+      "tagArgs": "--sign",
+      "push": true,
+      "pushArgs": "--follow-tags",
+      "pushRepo": "origin"
+    },
+    "npm": {
+      "publish": true
+    }
   }
 }
