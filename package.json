@@ -1,6 +1,6 @@
 {
   "name": "@summit-electric-supply/ember-peak-pager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, flexible and customizable pagination UI component for paginated data.",
   "keywords": [
     "ember-addon"
